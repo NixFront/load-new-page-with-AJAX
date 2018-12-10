@@ -1,0 +1,41 @@
+.header__carousel{
+	width: 100%;
+	.carousel{
+		height: 100%;
+		&-inner{
+			height: 100%;
+			.carousel-item{
+				height: 100%;
+				img{
+					object-fit: cover;
+					width: 100%;
+					height: 400px;
+				}
+			}
+		}
+		.controls{
+			display: flex;
+			justify-content: space-between;
+			position: absolute;
+			width: 100%;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%);
+			.carousel-control-prev,.carousel-control-next{
+				background-color: #d0d0d0;
+				color: #000;
+				height: 20%;
+				width: 50px;
+				position: relative;
+				span{
+					color: #000;
+					background-image: none;
+					font-size: 32px;
+					width: 100%;
+					height: 100%;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}

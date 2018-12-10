@@ -1,0 +1,78 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	.header{
+		nav{
+			.header__menu-mobile-btn{
+				display: block;
+			}
+			.header__menu{
+				flex-direction: column;
+				display: none;
+				li{
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	#products{
+		.categoryList{
+				display: block;
+			}
+		.products__category{
+			display: none;
+		}
+	}
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+#products{
+	.categoryList{
+
+	}
+	.products__gallery{
+		justify-content: center;
+		.products__gallery-item--tab{
+			justify-content: center;
+		}
+		
+	}
+}
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}

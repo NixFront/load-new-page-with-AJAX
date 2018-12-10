@@ -1,0 +1,126 @@
+#products{
+	.categoryList{
+			font-size: 28px;
+			width: 100%;
+			text-align: center;
+			position: relative;
+			cursor: pointer;
+			display: none;
+			
+			span{
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				left: 65%;
+				top: -3%;
+				transform: rotate(180deg);
+				transition: .3s ease-in-out;
+				&.clicked{
+					top: 45%;
+					left: 69%;
+					transform: rotate(90deg);
+				}
+				&:before,&:after{
+					content: '';
+					display: block;
+					width: 15px;
+					height: 3px;
+					background-color: #000;
+				}
+				&:before{
+					transform: rotate(45deg) translate(-5px);
+				}
+				&:after{
+					transform: rotate(-45deg) translate(-5px);
+				}
+			}
+		}
+	.products__category{
+		list-style: none;
+		margin: 0;
+		padding: 0 0;
+		margin-top: 10px;
+		li{
+			padding: 10px 0;
+			color: #000;
+			a{
+				color: #9a9a9a;
+				font-size: 24px;
+				&.active{
+					text-transform: underline;
+				}
+				&.call{
+					color: #757575;
+					border-bottom: 2px dashed;
+					text-decoration: none;
+					font-size: 28px;
+				}
+			}
+			&.top-20{
+				margin-top: 20px;
+			}
+			ul{
+				margin: 0;
+				li{
+					a{
+						font-size: 18px;
+						&:hover{
+							color: #000;
+						}
+					}
+				}
+			}
+		}
+	}
+	.products__gallery{
+		display: flex;
+		flex-wrap: wrap;
+		display: none;
+		.products__gallery-item--tab{
+		display: none;
+		flex-wrap: wrap;
+		width: 100%;
+		&.active{
+			display: flex;
+		}
+		}
+		&-item{
+			background-color: #dbdbdb;
+			width: 220px;
+			cursor: pointer;
+			margin: 10px;
+			.item-wrapp{
+				img{
+					width: 100%;
+				}
+				padding: 18px;
+				p{
+					padding-top: 15px;
+				}
+				.item-control{
+					display: flex;
+					justify-content: space-between;
+					margin-top: 15px;
+					span{
+						font-size: 24px;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	.tab-nav{
+		font-size: 18px;
+		text-align: center;
+		width: 100%;
+		span{
+			cursor: pointer;
+			transition: 0.3s;
+			display: inline-block;
+			&.active{
+				transform: scale(1.5);
+			}	
+		}
+
+	}
+	}
+}
